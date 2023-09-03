@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm install && tsc",
-    "start": "node dist/src/server.js",
+    "start": "node dist/server.js",
     "dev": "cross-env NODE_ENV=development nodemon --watch 'src/' --exec 'ts-node -r tsconfig-paths/register ./src/server.ts' -e ts",
     "test": "dotenv -e .env.test npm run prisma:migrate:deploy & dotenv -e .env.test jest -- -i",
     "prisma:migrate:dev": "prisma migrate dev",
@@ -39,6 +39,7 @@
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "typescript-transform-paths": "^3.4.6"
   }
 }
